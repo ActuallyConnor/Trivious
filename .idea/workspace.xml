@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce1bdd74-59e9-46af-abea-bfd2d5a08ac2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +134,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTTP Request" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="" />
@@ -141,11 +144,41 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager">
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:80/api/item" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.scratch#2">
+    <configuration name="scratch#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.scratch#2" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -170,11 +203,29 @@
       <option name="presentableId" value="Default" />
       <updated>1579810831821</updated>
       <workItem from="1579810833418" duration="387000" />
-      <workItem from="1579880864679" duration="1286000" />
+      <workItem from="1579880864679" duration="3423000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2560" height="389" key="GridCell.Tab.0.bottom" timestamp="1579885009833">
+      <screen x="1440" y="-517" width="2560" height="1417" />
+    </state>
+    <state width="2560" height="389" key="GridCell.Tab.0.bottom/1440.-517.2560.1417/0.23.1440.877@1440.-517.2560.1417" timestamp="1579885009833" />
+    <state width="2560" height="389" key="GridCell.Tab.0.center" timestamp="1579885009832">
+      <screen x="1440" y="-517" width="2560" height="1417" />
+    </state>
+    <state width="2560" height="389" key="GridCell.Tab.0.center/1440.-517.2560.1417/0.23.1440.877@1440.-517.2560.1417" timestamp="1579885009832" />
+    <state width="2560" height="389" key="GridCell.Tab.0.left" timestamp="1579885009832">
+      <screen x="1440" y="-517" width="2560" height="1417" />
+    </state>
+    <state width="2560" height="389" key="GridCell.Tab.0.left/1440.-517.2560.1417/0.23.1440.877@1440.-517.2560.1417" timestamp="1579885009832" />
+    <state width="2560" height="389" key="GridCell.Tab.0.right" timestamp="1579885009833">
+      <screen x="1440" y="-517" width="2560" height="1417" />
+    </state>
+    <state width="2560" height="389" key="GridCell.Tab.0.right/1440.-517.2560.1417/0.23.1440.877@1440.-517.2560.1417" timestamp="1579885009833" />
   </component>
 </project>
