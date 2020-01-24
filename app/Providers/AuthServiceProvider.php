@@ -22,6 +22,6 @@ class AuthServiceProvider extends ServiceProvider {
     public function boot() {
         $this->registerPolicies();
 
-        //
+        // https://laravel.com/docs/6.x/authorization
     }
 }

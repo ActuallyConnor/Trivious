@@ -1,9 +1,9 @@
 #Trvious
 
 ##API Authentication
-API authentication is handled the standard “out of the box” Laravel way as seen here - https://laravel.com/docs/6.x/api-authentication.
+API authentication is handled the standard “out of the box” Laravel way as seen here - [API Authentication](https://laravel.com/docs/6.x/api-authentication)
 
-API keys are hashed using SHA-256. In config/auth.php
+API keys are hashed using SHA-256. In `config/auth.php`
 
 ```
 'api' => [
@@ -52,3 +52,6 @@ $response = $client->request('POST', '/api/user', [
     ],
 ]);
 ```
+
+##Authorization
+Yet to be implemented since there is no administrator level privileges required for any actions. If there is a need to add a `POST` functionality so that certain people may add new questions to the database it can be reviewed then. Please see [Laravel Authorization](https://laravel.com/docs/6.x/authorization) for more information as to how to implement.
