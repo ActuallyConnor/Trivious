@@ -19,48 +19,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-/**
- * /questions
- */
-Route::get('questions', function() {
-    echo 'return questions with id starting at 1 to 100';
-});
+Route::get('question/{id}', 'QuestionController@getQuestionWithId');
 
-Route::get('questions/offset/{offset}', function($offset) {
-     echo 'return questions with id starting at '. $offset . ' to ' . ($offset + 100);
-});
+Route::get('questions/amount/{amount}/offset/{offset}', 'QuestionController@getBatchOfQuestions');
+Route::get('questions', 'QuestionController@getBatchOfFirstHundredQuestions');
+Route::get('questions/offset/{offset}', 'QuestionController@getBatchOfHundredQuestions');
 
-Route::get('questions/values/{value}', function($value) {
-   echo 'return all questions with value of ' . $value . ', 100 at a time';
-});
+Route::get('question/random', 'QuestionController@getRandomQuestion');
+Route::get('questions/random/{quantity}', 'QuestionController@getBatchOfRandomQuestions');
 
-Route::get('questions/values/{value}/offset/{offset}', function($value, $offset) {
-    echo 'return all questions with value of ' . $value . ', with an offset of '. $offset . ' to ' . ($offset + 100);
-});
+Route::get('questions/category/{category}', 'QuestionController@getQuestionsInCategory');
 
-/**
- * /question
- */
-Route::get('question', function() {
-    // return what??
-});
-
-Route::get('question/{id}', function($id) {
-    return Question::where('id', $id)->with(['category'])->get();
-});
-
-Route::get('question/random', function() {
-    // return random question
-});
-
-Route::get('question/random/{quantity}', function($quantity) {
-    //
-});
-
-Route::get('question/random/{value}', function($value) {
-    //
-});
-
-Route::group(['middleware' => ['auth:api']], function() {
-
-});
+// date - get all questions from one date
+// date - get random from todays date of any year
