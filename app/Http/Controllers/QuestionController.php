@@ -17,20 +17,12 @@ class QuestionController extends Controller {
         return Question::where('id', $id)->with(['category'])->get();
     }
 
-    function getBatchOfQuestions($amount, $offset) {
+    function getBatchOfQuestions($quantity, $offset) {
         $questions = array();
-        for ($i = $offset; $i < $amount + $offset; $i++) {
+        for ($i = $offset; $i < $quantity + $offset; $i++) {
             array_push($questions, $this->getQuestionWithId($i));
         }
         return $questions;
-    }
-
-    function getBatchOfFirstHundredQuestions() {
-        return $this->getBatchOfQuestions(100, 1);
-    }
-
-    function getBatchOfHundredQuestions($offset) {
-        return $this->getBatchOfQuestions(100, $offset);
     }
 
     function getRandomQuestion() {
@@ -49,6 +41,10 @@ class QuestionController extends Controller {
     function getQuestionsInCategory($category) {
         $category_id = Category::where('name', $category)->value('id');
         return Question::where('category_id', $category_id)->with(['category'])->get();
+    }
+
+    function getRandomQuestionInCategory($category) {
+        return $this->getQuestionsInCategory($category)->random();
     }
 
     function getQuestionsFromDate($date) {
@@ -71,7 +67,8 @@ class QuestionController extends Controller {
         return Question::where('value', $value)->with(['category'])->get();
     }
 
-    function getQuestionsOfValueAndAmount($value, $amount) {
-
+    function getRandomQuestionOfValue($value) {
+        return $this->getQuestionsOfValue($value)->random();
     }
+
 }
