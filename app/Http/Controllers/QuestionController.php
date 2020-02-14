@@ -49,4 +49,16 @@ class QuestionController extends Controller {
         $category_id = Category::where('name', $category)->value('id');
         return Question::where('category_id', $category_id)->with(['category'])->get();
     }
+
+    function getQuestionsFromDate($date) {
+        return Question::where('airdate', $date)->with(['category'])->get();
+    }
+
+    function getQuestionsOfValue($value) {
+        return Question::where('value', $value)->with(['category'])->get();
+    }
+
+    function getQuestionsOfValueAndAmount($value, $amount) {
+
+    }
 }
