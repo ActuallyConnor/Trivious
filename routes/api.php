@@ -32,6 +32,9 @@ Route::get('questions/random/{quantity}', 'QuestionController@getBatchOfRandomQu
 Route::get('questions/category/{category}', 'QuestionController@getQuestionsInCategory');
 
 // date - get all questions from one date
+Route::get('questions/date/month/{month}/day/{day}', 'QuestionController@getQuestionsFromDay');
+Route::get('questions/date/today', 'QuestionController@getRandomQuestionFromToday');
+
 Route::get('questions/date/{date}', 'QuestionController@getQuestionsFromDate');
 // date - get random from todays date of any year
 

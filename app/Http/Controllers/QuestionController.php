@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Question;
 use App\Category;
@@ -51,7 +52,19 @@ class QuestionController extends Controller {
     }
 
     function getQuestionsFromDate($date) {
-        return Question::where('airdate', $date)->with(['category'])->get();
+        return Question::where('air_date', $date)->with(['category'])->get();
+    }
+
+    function getQuestionsFromDay($month, $day) {
+        return Question::whereMonth('air_date', $month)->whereDay('air_date', $day)->with(['category'])->get();
+    }
+
+    function getQuestionsFromToday() {
+        return $this->getQuestionsFromDay(date("m"), date("d"));
+    }
+
+    function getRandomQuestionFromToday() {
+        return $this->getQuestionsFromDay(date("m"), date("d"))->random();
     }
 
     function getQuestionsOfValue($value) {
