@@ -17,37 +17,22 @@ class QuestionController extends Controller {
         return rand(1, $this->getNumberOfQuestions());
     }
 
-    function getQuestionWithId($id) {
-        return Question::where('id', $id)->with(['category'])->get();
-    }
-
-    function getBatchOfQuestions($quantity, $offset) {
-        $questions = array();
-        for ($i = $offset; $i < $quantity + $offset; $i++) {
-            array_push($questions, $this->getQuestionWithId($i));
+    function getQuestionsFromToday(Request $request) {
+        $question = Question::query();
+        if (count($request->all()) == 0) {
+            $question = $question->whereMonth('air_date', date('m'))
+            ->whereDay('air_date', date('d'));
         }
-        return $questions;
-    }
-
-    function getRandomQuestion() {
-        $random_id = rand(1, $this->getNumberOfQuestions());
-        return $this->getQuestionWithId($random_id);
-    }
-
-    function getBatchOfRandomQuestions($quantity) {
-        $questions = array();
-        for ($i = 0; $i < $quantity; $i++) {
-            array_push($questions, $this->getRandomQuestion());
+        if ($request->has('value')) {
+            $question = $question->where('value', $request->value);
         }
-        return $questions;
+        $question = $this->addCategoryToQuestionQuery($request, $question);
+
+        return $question->with(['category'])->get();
     }
 
-    function getQuestionsFromToday() {
-        return $this->getQuestionsFromDay(date("m"), date("d"));
-    }
-
-    function getRandomQuestionFromToday() {
-        return $this->getQuestionsFromDay(date("m"), date("d"))->random();
+    function getRandomQuestionFromToday(Request $request) {
+        return $this->getQuestionsFromToday($request)->random();
     }
 
     function singleQuestionRequestHandler(Request $request) {

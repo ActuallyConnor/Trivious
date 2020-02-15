@@ -72,6 +72,19 @@
                 </li>
             </ul>
         </div>
+        <div class="route-grouping">
+            <h3>/questions/today</h3>
+            <ul>
+                <li>URL: <span>/api/quesiton/today</span></li>
+                <li>Default: the default return is a random question that aired on today's date from any year</li>
+                <li>Options:
+                    <ul>
+                        <li><span>value</span>(int): a random question from today's date of the specified value</li>
+                        <li><span>category</span>(string): a random question from today's date from the specified category</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
