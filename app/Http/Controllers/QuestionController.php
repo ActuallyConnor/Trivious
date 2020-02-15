@@ -89,7 +89,7 @@ class QuestionController extends Controller {
     function questionRequestHandler($request, $question) {
         $question = $this->addParamToQuestionQuery($request, $question, 'value');
         $question = $this->addCategoryToQuestionQuery($request, $question);
-        $question = $this->addParamToQuestionQuery($request, $question, 'air_date');
+        $question = $this->addParamToQuestionQuery($request, $question, 'airdate');
 
         $question = $this->addDateParamsToQuestionQuery($request, $question);
 
