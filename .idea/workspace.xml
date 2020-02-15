@@ -210,7 +210,9 @@
       <workItem from="1581553046412" duration="1269000" />
       <workItem from="1581557633335" duration="2740000" />
       <workItem from="1581635273470" duration="4203000" />
-      <workItem from="1581712524233" duration="2056000" />
+      <workItem from="1581712524233" duration="5502000" />
+      <workItem from="1581719704362" duration="510000" />
+      <workItem from="1581777275895" duration="5610000" />
     </task>
     <servers />
   </component>
@@ -218,6 +220,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="220" y="46" key="#Notifications" timestamp="1581782271504">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="220" y="46" key="#Notifications/0.23.1440.877/1440.-517.2560.1417@0.23.1440.877" timestamp="1581782271504" />
     <state width="2508" height="202" key="GridCell.Tab.0.bottom" timestamp="1581557905848">
       <screen x="1440" y="-517" width="2560" height="1417" />
     </state>
@@ -238,5 +244,10 @@
     </state>
     <state width="2508" height="202" key="GridCell.Tab.0.right/0.23.1440.877/1440.-517.2560.1417@1440.-517.2560.1417" timestamp="1581557905848" />
     <state width="2560" height="389" key="GridCell.Tab.0.right/1440.-517.2560.1417/0.23.1440.877@1440.-517.2560.1417" timestamp="1579885009833" />
+    <state x="1975" y="-201" width="1490" height="1668" key="search.everywhere.popup" timestamp="1581786734358">
+      <screen x="1440" y="-201" width="2560" height="1417" />
+    </state>
+    <state x="1975" y="-201" width="1490" height="1668" key="search.everywhere.popup/0.23.1440.877/1440.-201.2560.1417@1440.-201.2560.1417" timestamp="1581786734358" />
+    <state x="301" y="23" width="838" height="1032" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1581717037385" />
   </component>
 </project>

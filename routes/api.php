@@ -20,16 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('question/random', 'QuestionController@getRandomQuestion');
-Route::get('question/id/{id}', 'QuestionController@getQuestionWithId');
-Route::get('question/date/today', 'QuestionController@getRandomQuestionFromToday');
-Route::get('question/category/{category}/random', 'QuestionController@getRandomQuestionInCategory');
-Route::get('question/value/{value}/random', 'QuestionController@getRandomQuestionOfValue');
+Route::get('question', 'QuestionController@singleQuestionRequestHandler');
 
-Route::get('questions/quantity/{quantity}/offset/{offset}', 'QuestionController@getBatchOfQuestions');
-Route::get('questions/random/quantity/{quantity}', 'QuestionController@getBatchOfRandomQuestions');
-Route::get('questions/category/{category}', 'QuestionController@getQuestionsInCategory');
-Route::get('questions/date/month/{month}/day/{day}', 'QuestionController@getQuestionsFromDay');
-Route::get('questions/date/{date}', 'QuestionController@getQuestionsFromDate');
-Route::get('questions/value/{value}', 'QuestionController@getQuestionsOfValue');
+Route::get('question/today', 'QuestionController@getRandomQuestionFromToday');
+Route::get('questions/today', 'QuestionController@getQuestionsFromToday');
 
+Route::get('questions', 'QuestionController@multiQuestionRequestHandler');

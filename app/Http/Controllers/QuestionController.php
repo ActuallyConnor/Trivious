@@ -13,6 +13,10 @@ class QuestionController extends Controller {
         return 96221;
     }
 
+    function getRandomId() {
+        return rand(1, $this->getNumberOfQuestions());
+    }
+
     function getQuestionWithId($id) {
         return Question::where('id', $id)->with(['category'])->get();
     }
@@ -38,23 +42,6 @@ class QuestionController extends Controller {
         return $questions;
     }
 
-    function getQuestionsInCategory($category) {
-        $category_id = Category::where('name', $category)->value('id');
-        return Question::where('category_id', $category_id)->with(['category'])->get();
-    }
-
-    function getRandomQuestionInCategory($category) {
-        return $this->getQuestionsInCategory($category)->random();
-    }
-
-    function getQuestionsFromDate($date) {
-        return Question::where('air_date', $date)->with(['category'])->get();
-    }
-
-    function getQuestionsFromDay($month, $day) {
-        return Question::whereMonth('air_date', $month)->whereDay('air_date', $day)->with(['category'])->get();
-    }
-
     function getQuestionsFromToday() {
         return $this->getQuestionsFromDay(date("m"), date("d"));
     }
@@ -63,12 +50,78 @@ class QuestionController extends Controller {
         return $this->getQuestionsFromDay(date("m"), date("d"))->random();
     }
 
-    function getQuestionsOfValue($value) {
-        return Question::where('value', $value)->with(['category'])->get();
+    function singleQuestionRequestHandler(Request $request) {
+        $question = Question::query();
+
+        if (count($request->all()) == 0) {
+            $random_id = rand(1, $this->getNumberOfQuestions());
+            $question = $question->where('id', $random_id);
+        }
+
+        $question = $this->addParamToQuestionQuery($request, $question, 'id');
+
+        $question = $this->questionRequestHandler($request, $question);
+
+        return $question->with('category')->get()->random();
     }
 
-    function getRandomQuestionOfValue($value) {
-        return $this->getQuestionsOfValue($value)->random();
+    function multiQuestionRequestHandler(Request $request) {
+        $question = Question::query();
+
+        if (count($request->all()) == 0) {
+            $question = $question->where('id', '>', 0)
+                ->limit(100);
+        }
+
+        $question = $this->questionRequestHandler($request, $question);
+
+        if ($request->has('offset')) {
+            $question = $question->where('id', '>', $request->offset - 1);
+        }
+
+        if ($request->has('quantity')) {
+            $question = $question->limit($request->quantity);
+        }
+
+        return $question->with(['category'])->get();
+    }
+
+    function questionRequestHandler($request, $question) {
+        $question = $this->addParamToQuestionQuery($request, $question, 'value');
+        $question = $this->addCategoryToQuestionQuery($request, $question);
+        $question = $this->addParamToQuestionQuery($request, $question, 'air_date');
+
+        $question = $this->addDateParamsToQuestionQuery($request, $question);
+
+        return $question;
+    }
+
+    function addParamToQuestionQuery($request, $question, $param) {
+        if ($request->has($param)) {
+            $question = $question->where($param, $request->input($param));
+        }
+        return $question;
+    }
+
+    function addCategoryToQuestionQuery($request, $question) {
+        if ($request->has('category')) {
+            $category_id = Category::where('name', $request->category)->value('id');
+            $question = $question->where('category_id', $category_id);
+        }
+        return $question;
+    }
+
+    function addDateParamsToQuestionQuery($request, $question) {
+        if ($request->has('year')) {
+            $question = $question->whereYear('air_date', $request->year);
+        }
+        if ($request->has('month')) {
+            $question = $question->whereMonth('air_date', $request->month);
+        }
+        if ($request->has('day')) {
+            $question = $question->whereDay('air_date', $request->day);
+        }
+        return $question;
     }
 
 }
