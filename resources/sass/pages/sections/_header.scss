@@ -4,6 +4,7 @@ header {
     justify-content: space-between;
     width: 100%;
     max-width: 1366px;
+    align-items: center;
     @media screen and (max-width: $ipadpro) {
         position: relative;
         &.limit-width {

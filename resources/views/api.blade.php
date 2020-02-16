@@ -21,6 +21,7 @@
         @include('menu')
     </header>
     <div class="sample">
+        <a href="/" class="back">Back</a>
         <div class="sample-inner">
                 <pre>
 {

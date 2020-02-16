@@ -47,6 +47,8 @@ header {
           justify-content: space-between;
   width: 100%;
   max-width: 1366px;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -237,6 +239,18 @@ footer .footer-container .copyright p {
   display: flex;
   -webkit-box-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.sample .back {
+  background-color: #FFE66D;
+  padding: 2px 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  left: 5%;
+  top: 30px;
 }
 
 .sample .sample-inner {
@@ -246,6 +260,12 @@ footer .footer-container .copyright p {
   border-radius: 25px;
   margin: 40px 0;
   padding: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .sample .sample-inner {
+    margin: 70px 0 40px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -360,6 +380,37 @@ footer .footer-container .copyright p {
     width: 100%;
     word-break: break-word;
   }
+}
+
+body .homepage {
+  width: 800px !important;
+  margin: 25px 0;
+}
+
+@media screen and (max-width: 900px) {
+  body .homepage {
+    width: 85% !important;
+  }
+}
+
+body .homepage a {
+  background-color: #FFE66D;
+  padding: 2px 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px 0;
+}
+
+body .homepage p {
+  margin: 10px 0;
+  line-height: 1.6em;
+}
+
+body .homepage p a {
+  background-color: #FFE66D;
+  padding: 2px 5px;
+  font-size: 20px;
 }
 
 body {

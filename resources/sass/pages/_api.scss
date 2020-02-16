@@ -3,6 +3,18 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
+    .back {
+        background-color: $yellow;
+        padding: 2px 5px;
+        height: fit-content;
+        position: absolute;
+        left: 5%;
+        top: 30px;
+        @media screen and (max-width: 900px) {
+
+        }
+    }
     .sample-inner {
         background-color: white;
         width: 700px;
@@ -10,6 +22,9 @@
         border-radius: 25px;
         margin: 40px 0;
         padding: 20px;
+        @media screen and (max-width: 900px) {
+            margin: 70px 0 40px;
+        }
         @media screen and (max-width: $ipadpro) {
             width: 600px;
         }

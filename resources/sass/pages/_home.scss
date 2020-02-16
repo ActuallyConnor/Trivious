@@ -1,0 +1,27 @@
+body {
+    .homepage {
+        width: 800px!important;
+        margin: 25px 0;
+        @media screen and (max-width: 900px) {
+            width: 85%!important;
+        }
+        h1 {
+
+        }
+        a {
+            background-color: $yellow;
+            padding: 2px 5px;
+            width: fit-content;
+            margin: 10px 0;
+        }
+        p {
+            margin: 10px 0;
+            line-height: 1.6em;
+            a {
+                background-color: $yellow;
+                padding: 2px 5px;
+                font-size: 20px;
+            }
+        }
+    }
+}

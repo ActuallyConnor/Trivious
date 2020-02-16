@@ -1,4 +1,4 @@
-# Trivia API Documentation - Connor Smyth
+# Trivia API Documentation
 
 ### Sample
 ```
