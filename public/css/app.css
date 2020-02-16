@@ -1,0 +1,138 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: "IBM Plex Sans", sans-serif;
+  text-transform: uppercase;
+  color: #292F36;
+}
+
+h1,
+h2 {
+  font-size: 32px;
+}
+
+h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 50px 0 40px;
+  padding: 10px 20px;
+  border-top: 2px solid #292F36;
+  border-bottom: 2px solid #292F36;
+}
+
+p,
+li,
+a {
+  font-family: "Montserrat", sans-serif;
+  color: #292F36;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: #292F36;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+body .main-container {
+  width: 1366px;
+}
+
+@media screen and (max-width: 1440px) {
+  body .main-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body .main-container {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .main-container {
+    width: 80%;
+  }
+}
+
+body .main-container h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body .main-container .route-grouping {
+  background-color: #f6f9fc;
+  border: 5px solid #292F36;
+  box-shadow: 15px 15px 0 0 #FF6B6B;
+  border-radius: 25px;
+  margin: 50px 0;
+  padding: 40px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+body .main-container .route-grouping:nth-child(3) {
+  box-shadow: 15px 15px 0 0 #FFE66D;
+}
+
+body .main-container .route-grouping:nth-child(4) {
+  box-shadow: 15px 15px 0 0 #4ECDC4;
+}
+
+body .main-container .route-grouping:nth-child(5) {
+  box-shadow: 15px 15px 0 0 #BA7BA1;
+}
+
+body .main-container .route-grouping span {
+  background-color: #f4f4f4;
+  color: #DC143C;
+  padding: 3px 5px;
+  margin: 0 3px;
+  border-radius: 3px;
+  font-family: monospace, monospace;
+  font-size: 15px;
+}
+
+body .main-container .route-grouping h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+}
+
+body .main-container .route-grouping ul li {
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 0;
+}
+
+body .main-container .route-grouping p:last-child {
+  margin-bottom: 20px;
+}
+
+body .main-container .route-grouping p a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+  text-decoration: underline;
+  color: #556170;
+}
+

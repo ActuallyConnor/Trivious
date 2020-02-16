@@ -1,0 +1,56 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (max-width: $ipadpro) {
+        position: relative;
+        &.limit-width {
+            margin: 0 5%;
+        }
+    }
+    @media screen and (max-width: $ipad) {
+        height: 127px;
+    }
+    h1 {
+        width: 30%;
+        @media screen and (max-width: $ipadpro) {
+            width: 50%;
+            margin-left: 5%;
+        }
+    }
+    .hamburger {
+        display: none;
+        @media screen and (max-width: $ipadpro) {
+            display: block;
+            outline: none;
+            cursor: pointer;
+            margin-right: 5%;
+            padding: 0;
+        }
+    }
+    .main-menu {
+        width: 70%;
+        justify-content: flex-end;
+        align-items: center;
+        @media screen and (max-width: $ipadpro) {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            top: 110px;
+            width: 100%;
+            background-color: $offwhite;
+            justify-content: center;
+            padding: 0;
+            &.show {
+                display: flex;
+            }
+        }
+        li {
+            padding: 0 20px;
+            .sub-menu {
+                display: none;
+            }
+        }
+    }
+}

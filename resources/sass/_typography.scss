@@ -1,0 +1,27 @@
+h1, h2, h3, h4 {
+    font-family: $ibm_plex;
+    text-transform: uppercase;
+    color: $darkgrey;
+}
+h1, h2 {
+    font-size: 32px;
+}
+h2 {
+    width: fit-content;
+    margin: 50px 0 40px;
+    padding: 10px 20px;
+    border-top: 2px solid $darkgrey;
+    border-bottom: 2px solid $darkgrey;
+}
+p, li, a {
+    font-family: $montserrat;
+    color: $darkgrey;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+}
+a {
+    text-decoration: none;
+    color: $darkgrey
+}
+

@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ url('css/app.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i|Montserrat&display=swap" rel="stylesheet" type="text/css">
 </head>
 <body>
     <header>
@@ -35,8 +37,8 @@
                     </ul>
                 </li>
             </ul>
-            <a href="https://trivia.connorsmyth.com/api/question/?id=6" class="example">https://trivia.connorsmyth.com/api/question/?id=6</a>
-            <a href="https://trivia.connorsmyth.com/api/question/?value=200&category=music" class="example">https://trivia.connorsmyth.com/api/question/?value=200&category=music</a>
+            <p>Example: <a href="https://trivia.connorsmyth.com/api/question/?id=6" class="example">https://trivia.connorsmyth.com/api/question/?id=6</a></p>
+            <p>Example: <a href="https://trivia.connorsmyth.com/api/question/?value=200&category=music" class="example">https://trivia.connorsmyth.com/api/question/?value=200&category=music</a></p>
         </div>
 
         <div class="route-grouping">
@@ -57,7 +59,7 @@
                     </ul>
                 </li>
             </ul>
-            <a href="https://trivia.connorsmyth.com/api/questions/?value=200&category=music" class="example">https://trivia.connorsmyth.com/api/questions/?value=200&category=sports</a>
+            <p>Example: <a href="https://trivia.connorsmyth.com/api/questions/?value=200&category=music" class="example">https://trivia.connorsmyth.com/api/questions/?value=200&category=sports</a></p>
         </div>
         <div class="route-grouping">
             <h3>/question/today</h3>
