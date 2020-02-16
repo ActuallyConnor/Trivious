@@ -49,7 +49,7 @@
                 <li>Default: the default return is a random question</li>
                 <li>Options:
                     <ul>
-                        <li><span>id</span>(int): the specific id of the question</li>
+                        <li><span>id</span>(int): the question with the specified id</li>
                         <li><span>value</span>(int): a random question of the specified value</li>
                         <li><span>category</span>(string): a random question from the specified category</li>
                         <li><span>airdate</span>(string): a random question from the specified air date</li>
