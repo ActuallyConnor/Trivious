@@ -142,7 +142,7 @@ body .main-container .route-grouping ul li {
   margin: 10px 0;
 }
 
-@media screen and (max-width: 500) {
+@media screen and (max-width: 500px) {
   body .main-container .route-grouping ul li {
     font-size: 16px;
   }
