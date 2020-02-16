@@ -41,14 +41,13 @@ body {
             width: 85%;
         }
         @media screen and (max-width: 500px) {
-            width: 80%;
+            width: 85%;
         }
         h2 {
             font-family: $ibm_plex;
         }
 
         .route-grouping {
-            background-color: $offwhite;
             border: 5px solid $darkgrey;
             box-shadow: 15px 15px 0 0 $notred;
             border-radius: 25px;
@@ -56,6 +55,9 @@ body {
             padding: 40px;
             display: flex;
             flex-direction: column;
+            @media screen and (max-width: 500px) {
+                padding: 30px 20px;
+            }
             &:nth-child(3) {
                 box-shadow: 15px 15px 0 0 $yellow;
             }
@@ -81,9 +83,14 @@ body {
             }
 
             ul {
+                padding: 0 0 0 15px;
                 li {
                     font-family: $montserrat;
+                    font-size: 18px;
                     margin: 10px 0;
+                    @media screen and (max-width: 500) {
+                        font-size: 16px;
+                    }
                     ul {
                         li {
 
@@ -92,6 +99,7 @@ body {
                 }
             }
             p {
+                margin: 10px 0;
                 &:last-child {
                     margin-bottom: 20px;
                 }
@@ -101,6 +109,10 @@ body {
                     margin: 10px 0;
                     text-decoration: underline;
                     color: lighten($darkgrey, 20%);
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        word-break: break-word;
+                    }
                 }
             }
         }

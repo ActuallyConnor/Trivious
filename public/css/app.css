@@ -70,7 +70,7 @@ body .main-container {
 
 @media screen and (max-width: 500px) {
   body .main-container {
-    width: 80%;
+    width: 85%;
   }
 }
 
@@ -79,7 +79,6 @@ body .main-container h2 {
 }
 
 body .main-container .route-grouping {
-  background-color: #f6f9fc;
   border: 5px solid #292F36;
   box-shadow: 15px 15px 0 0 #FF6B6B;
   border-radius: 25px;
@@ -90,6 +89,12 @@ body .main-container .route-grouping {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+}
+
+@media screen and (max-width: 500px) {
+  body .main-container .route-grouping {
+    padding: 30px 20px;
+  }
 }
 
 body .main-container .route-grouping:nth-child(3) {
@@ -119,8 +124,23 @@ body .main-container .route-grouping h3 {
   margin: 0;
 }
 
+body .main-container .route-grouping ul {
+  padding: 0 0 0 15px;
+}
+
 body .main-container .route-grouping ul li {
   font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 500) {
+  body .main-container .route-grouping ul li {
+    font-size: 16px;
+  }
+}
+
+body .main-container .route-grouping p {
   margin: 10px 0;
 }
 
@@ -134,5 +154,12 @@ body .main-container .route-grouping p a {
   margin: 10px 0;
   text-decoration: underline;
   color: #556170;
+}
+
+@media screen and (max-width: 768px) {
+  body .main-container .route-grouping p a {
+    width: 100%;
+    word-break: break-word;
+  }
 }
 
