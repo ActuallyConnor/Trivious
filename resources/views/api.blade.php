@@ -23,7 +23,7 @@
         <div class="route-grouping">
             <h3>/question</h3>
             <ul>
-                <li>URL: <span>/api/quesiton</span></li>
+                <li>URL: <span>/api/question</span></li>
                 <li>Default: the default return is a random question</li>
                 <li>Options:
                     <ul>
@@ -44,7 +44,7 @@
         <div class="route-grouping">
             <h3>/questions</h3>
             <ul>
-                <li>URL: <span>/api/quesitons</span></li>
+                <li>URL: <span>/api/questions</span></li>
                 <li>Default: the default return is a group of 100 questions starting with an id of 1 and ending with an id of 100</li>
                 <li>Options:
                     <ul>
@@ -64,7 +64,7 @@
         <div class="route-grouping">
             <h3>/question/today</h3>
             <ul>
-                <li>URL: <span>/api/quesiton/today</span></li>
+                <li>URL: <span>/api/question/today</span></li>
                 <li>Default: the default return is a random question that aired on today's date from any year</li>
                 <li>Options:
                     <ul>
@@ -77,12 +77,12 @@
         <div class="route-grouping">
             <h3>/questions/today</h3>
             <ul>
-                <li>URL: <span>/api/quesiton/today</span></li>
-                <li>Default: the default return is a random question that aired on today's date from any year</li>
+                <li>URL: <span>/api/questions/today</span></li>
+                <li>Default: the default all questions that aired on today's date from any year</li>
                 <li>Options:
                     <ul>
-                        <li><span>value</span>(int): a random question from today's date of the specified value</li>
-                        <li><span>category</span>(string): a random question from today's date from the specified category</li>
+                        <li><span>value</span>(int): all questions from today's date of the specified value</li>
+                        <li><span>category</span>(string): all questions from today's date from the specified category</li>
                     </ul>
                 </li>
             </ul>
