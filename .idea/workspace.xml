@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce1bdd74-59e9-46af-abea-bfd2d5a08ac2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/hamburgers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/hamburger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/pages/_api.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/pages/sections/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/pages/sections/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/pages/sections/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/api.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/api.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +149,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTTP Request" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="" />
@@ -148,6 +161,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js" />
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/resources/sass/pages/sections" />
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources" />
     </key>
   </component>
@@ -220,7 +237,9 @@
       <workItem from="1581635273470" duration="4203000" />
       <workItem from="1581712524233" duration="5502000" />
       <workItem from="1581719704362" duration="510000" />
-      <workItem from="1581777275895" duration="15024000" />
+      <workItem from="1581777275895" duration="15307000" />
+      <workItem from="1581867566615" duration="43000" />
+      <workItem from="1581869436086" duration="2361000" />
     </task>
     <servers />
   </component>
@@ -252,6 +271,10 @@
     </state>
     <state width="2508" height="202" key="GridCell.Tab.0.right/0.23.1440.877/1440.-517.2560.1417@1440.-517.2560.1417" timestamp="1581557905848" />
     <state width="2560" height="389" key="GridCell.Tab.0.right/1440.-517.2560.1417/0.23.1440.877@1440.-517.2560.1417" timestamp="1579885009833" />
+    <state x="2239" y="23" width="962" height="969" key="find.popup" timestamp="1581877465395">
+      <screen x="1440" y="-201" width="2560" height="1417" />
+    </state>
+    <state x="2239" y="23" width="962" height="969" key="find.popup/1440.-201.2560.1417/0.23.1440.877@1440.-201.2560.1417" timestamp="1581877465395" />
     <state x="1975" y="-201" width="1490" height="1668" key="search.everywhere.popup" timestamp="1581786734358">
       <screen x="1440" y="-201" width="2560" height="1417" />
     </state>

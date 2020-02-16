@@ -13,5 +13,14 @@
 </head>
 <body>
 
+    <header class="limit-width">
+        <h1>Connor Smyth</h1>
+        @include('menu')
+    </header>
+
+    <footer>
+        @include('footer')
+    </footer>
+
 </body>
 </html>

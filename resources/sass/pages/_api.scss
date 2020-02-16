@@ -1,0 +1,99 @@
+.sample {
+    background-color: $offyellow;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .sample-inner {
+        background-color: white;
+        width: 700px;
+        border: 5px solid $darkgrey;
+        border-radius: 25px;
+        margin: 40px 0;
+        padding: 20px;
+        @media screen and (max-width: $ipadpro) {
+            width: 600px;
+        }
+        @media screen and (max-width: $ipad) {
+            width: 500px;
+        }
+        @media screen and (max-width: $mobile) {
+            width: 75%;
+        }
+        pre {
+            font-size: 15px;
+            @media screen and (max-width: $ipadpro) {
+                font-size: 13px;
+            }
+            @media screen and (max-width: $ipad) {
+                white-space: pre-wrap;
+            }
+        }
+    }
+}
+.route-grouping {
+    border: 5px solid $darkgrey;
+    box-shadow: 15px 15px 0 0 $notred;
+    border-radius: 25px;
+    margin: 50px 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 500px) {
+        padding: 30px 20px;
+        margin: 30px 0;
+    }
+    &:nth-child(3) {
+        box-shadow: 15px 15px 0 0 $yellow;
+    }
+    &:nth-child(4) {
+        box-shadow: 15px 15px 0 0 $teal;
+    }
+    &:nth-child(5) {
+        box-shadow: 15px 15px 0 0 $pink;
+    }
+    span {
+        background-color: #f4f4f4;
+        color: #DC143C;
+        padding: 3px 5px;
+        margin: 0 3px;
+        border-radius: 3px;
+        font-family: monospace,monospace;
+        font-size: 15px;
+    }
+
+    h3 {
+        font-family: $ibm_plex;
+        margin: 0;
+    }
+
+    ul {
+        padding: 0 0 0 20px;
+        li {
+            font-family: $montserrat;
+            font-size: 18px;
+            margin: 10px 0;
+            ul {
+                li {
+
+                }
+            }
+        }
+    }
+    p {
+        margin: 10px 0;
+        &:last-child {
+            margin-bottom: 20px;
+        }
+        a {
+            font-family: $montserrat;
+            font-size: 18px;
+            margin: 10px 0;
+            text-decoration: underline;
+            color: lighten($darkgrey, 20%);
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                word-break: break-word;
+            }
+        }
+    }
+}

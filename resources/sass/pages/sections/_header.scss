@@ -3,6 +3,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    max-width: 1366px;
     @media screen and (max-width: $ipadpro) {
         position: relative;
         &.limit-width {
@@ -12,7 +13,7 @@ header {
     @media screen and (max-width: $ipad) {
         height: 127px;
     }
-    h1 {
+    > a {
         width: 30%;
         @media screen and (max-width: $ipadpro) {
             width: 50%;
@@ -31,6 +32,7 @@ header {
     }
     .main-menu {
         width: 70%;
+        display: flex;
         justify-content: flex-end;
         align-items: center;
         @media screen and (max-width: $ipadpro) {
@@ -47,7 +49,48 @@ header {
             }
         }
         li {
-            padding: 0 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            list-style-type: none;
+            &:hover {
+                a {
+                    text-shadow: 1px 1px 2px $yellow;
+                }
+            }
+            &:hover {
+                position: relative;
+                .sub-menu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    position: absolute;
+                    top: 48px;
+                    left: 0;
+                    background-color: white;
+                    border: 5px solid $darkgrey;
+                    border-radius: 25px;
+                    padding: 10px 20px;
+                    width: 200px;
+                    box-shadow: 10px 10px 0px 0px $teal;
+                    li {
+                        padding: 10px;
+                        border-bottom: 1px solid lightgrey;
+                        width: 175px;
+                        &:hover {
+                            a {
+                                text-shadow: 1px 1px 2px $yellow;
+                            }
+                        }
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        a {
+                            font-size: 18px;
+                            text-shadow: none;
+                        }
+                    }
+                }
+            }
             .sub-menu {
                 display: none;
             }

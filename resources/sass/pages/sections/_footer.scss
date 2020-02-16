@@ -1,0 +1,36 @@
+footer {
+    background-color: $darkgrey;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0;
+            margin: 0 0 40px;
+            li {
+                margin: 0 20px;
+                a {
+                    i {
+                        color: white;
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+        .copyright {
+            display: flex;
+            justify-content: center;
+            p {
+                color: white;
+                font-size: 15px;
+            }
+        }
+    }
+}

@@ -37,6 +37,331 @@ a {
   color: #292F36;
 }
 
+header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 1366px;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    position: relative;
+  }
+
+  header.limit-width {
+    margin: 0 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 127px;
+  }
+}
+
+header > a {
+  width: 30%;
+}
+
+@media screen and (max-width: 1024px) {
+  header > a {
+    width: 50%;
+    margin-left: 5%;
+  }
+}
+
+header .hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  header .hamburger {
+    display: block;
+    outline: none;
+    cursor: pointer;
+    margin-right: 5%;
+    padding: 0;
+  }
+}
+
+header .main-menu {
+  width: 70%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  header .main-menu {
+    position: absolute;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    top: 110px;
+    width: 100%;
+    background-color: #f6f9fc;
+    -webkit-box-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+
+  header .main-menu.show {
+    display: -webkit-box;
+    display: flex;
+  }
+}
+
+header .main-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+header .main-menu li:hover a {
+  text-shadow: 1px 1px 2px #FFE66D;
+}
+
+header .main-menu li:hover {
+  position: relative;
+}
+
+header .main-menu li:hover .sub-menu {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  background-color: white;
+  border: 5px solid #292F36;
+  border-radius: 25px;
+  padding: 10px 20px;
+  width: 200px;
+  box-shadow: 10px 10px 0px 0px #4ECDC4;
+}
+
+header .main-menu li:hover .sub-menu li {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+  width: 175px;
+}
+
+header .main-menu li:hover .sub-menu li:hover a {
+  text-shadow: 1px 1px 2px #FFE66D;
+}
+
+header .main-menu li:hover .sub-menu li:last-child {
+  border-bottom: none;
+}
+
+header .main-menu li:hover .sub-menu li a {
+  font-size: 18px;
+  text-shadow: none;
+}
+
+header .main-menu li .sub-menu {
+  display: none;
+}
+
+footer {
+  background-color: #292F36;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+footer .footer-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 40px 0;
+}
+
+footer .footer-container ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0 0 40px;
+}
+
+footer .footer-container ul li {
+  margin: 0 20px;
+}
+
+footer .footer-container ul li a i {
+  color: white;
+  font-size: 35px;
+}
+
+footer .footer-container .copyright {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+footer .footer-container .copyright p {
+  color: white;
+  font-size: 15px;
+}
+
+.sample {
+  background-color: #FCFAF2;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.sample .sample-inner {
+  background-color: white;
+  width: 700px;
+  border: 5px solid #292F36;
+  border-radius: 25px;
+  margin: 40px 0;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .sample .sample-inner {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sample .sample-inner {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sample .sample-inner {
+    width: 75%;
+  }
+}
+
+.sample .sample-inner pre {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .sample .sample-inner pre {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sample .sample-inner pre {
+    white-space: pre-wrap;
+  }
+}
+
+.route-grouping {
+  border: 5px solid #292F36;
+  box-shadow: 15px 15px 0 0 #FF6B6B;
+  border-radius: 25px;
+  margin: 50px 0;
+  padding: 40px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 500px) {
+  .route-grouping {
+    padding: 30px 20px;
+    margin: 30px 0;
+  }
+}
+
+.route-grouping:nth-child(3) {
+  box-shadow: 15px 15px 0 0 #FFE66D;
+}
+
+.route-grouping:nth-child(4) {
+  box-shadow: 15px 15px 0 0 #4ECDC4;
+}
+
+.route-grouping:nth-child(5) {
+  box-shadow: 15px 15px 0 0 #BA7BA1;
+}
+
+.route-grouping span {
+  background-color: #f4f4f4;
+  color: #DC143C;
+  padding: 3px 5px;
+  margin: 0 3px;
+  border-radius: 3px;
+  font-family: monospace, monospace;
+  font-size: 15px;
+}
+
+.route-grouping h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+}
+
+.route-grouping ul {
+  padding: 0 0 0 20px;
+}
+
+.route-grouping ul li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.route-grouping p {
+  margin: 10px 0;
+}
+
+.route-grouping p:last-child {
+  margin-bottom: 20px;
+}
+
+.route-grouping p a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+  text-decoration: underline;
+  color: #556170;
+}
+
+@media screen and (max-width: 768px) {
+  .route-grouping p a {
+    width: 100%;
+    word-break: break-word;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -45,11 +370,11 @@ body {
   overflow-x: hidden;
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 body .main-container {
@@ -83,85 +408,5 @@ body .main-container {
 body .main-container h2 {
   align-self: center;
   font-family: "IBM Plex Sans", sans-serif;
-}
-
-body .main-container .route-grouping {
-  border: 5px solid #292F36;
-  box-shadow: 15px 15px 0 0 #FF6B6B;
-  border-radius: 25px;
-  margin: 50px 0;
-  padding: 40px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-}
-
-@media screen and (max-width: 500px) {
-  body .main-container .route-grouping {
-    padding: 30px 20px;
-    margin: 30px 0;
-  }
-}
-
-body .main-container .route-grouping:nth-child(3) {
-  box-shadow: 15px 15px 0 0 #FFE66D;
-}
-
-body .main-container .route-grouping:nth-child(4) {
-  box-shadow: 15px 15px 0 0 #4ECDC4;
-}
-
-body .main-container .route-grouping:nth-child(5) {
-  box-shadow: 15px 15px 0 0 #BA7BA1;
-}
-
-body .main-container .route-grouping span {
-  background-color: #f4f4f4;
-  color: #DC143C;
-  padding: 3px 5px;
-  margin: 0 3px;
-  border-radius: 3px;
-  font-family: monospace, monospace;
-  font-size: 15px;
-}
-
-body .main-container .route-grouping h3 {
-  font-family: "IBM Plex Sans", sans-serif;
-  margin: 0;
-}
-
-body .main-container .route-grouping ul {
-  padding: 0 0 0 20px;
-}
-
-body .main-container .route-grouping ul li {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-body .main-container .route-grouping p {
-  margin: 10px 0;
-}
-
-body .main-container .route-grouping p:last-child {
-  margin-bottom: 20px;
-}
-
-body .main-container .route-grouping p a {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  margin: 10px 0;
-  text-decoration: underline;
-  color: #556170;
-}
-
-@media screen and (max-width: 768px) {
-  body .main-container .route-grouping p a {
-    width: 100%;
-    word-break: break-word;
-  }
 }
 

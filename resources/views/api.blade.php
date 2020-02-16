@@ -10,13 +10,35 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+    <link href="/css/hamburgers.css" rel="stylesheet">
     <link href="{{ url('css/app.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i|Montserrat&display=swap" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header>
-
+    <header class="limit-width">
+        <a href="https://connorsmyth.com"><h1>Connor Smyth</h1></a>
+        @include('menu')
     </header>
+    <div class="sample">
+        <div class="sample-inner">
+                <pre>
+{
+    "id": 29299,
+    "answer": "<i>Raiders of the Lost Ark</i>",
+    "question": "This 1981 blockbuster introduced the hero Indiana Jones",
+    "value": 100,
+    "airdate": "2000-10-02T12:00:00.000Z",
+    "air_date": "2000-10-02",
+    "category_id": 309,
+    "category": {
+        "id": 309,
+        "name": "the movies"
+    }
+}
+                </pre>
+        </div>
+    </div>
     <div class="main-container">
         <h2>API Usage</h2>
 
@@ -88,5 +110,10 @@
             </ul>
         </div>
     </div>
-</body>
+
+    <footer>
+        @include('footer')
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/js/app.js"></script></body>
 </html>
