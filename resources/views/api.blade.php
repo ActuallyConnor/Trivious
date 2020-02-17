@@ -74,7 +74,7 @@
                         <li><span>value</span>(int): all questions of the specified value</li>
                         <li><span>category</span>(string): all questions from the specified category</li>
                         <li><span>airdate</span>(string): all questions from the specified air date</li>
-                        <li><span>year<</span>(int): all questions from the specified year</li>
+                        <li><span>year</span>(int): all questions from the specified year</li>
                         <li><span>month</span>(int): all questions from the specified month</li>
                         <li><span>day</span>(int): all questions from the specified day</li>
                         <li><span>offset</span>(int): all questions starting from a specified offset number</li>
