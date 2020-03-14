@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/api', function() {
     return view('api');
 });
+Route::get('/docs', function() {
+    return view('docs');
+});
