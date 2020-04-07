@@ -12,6 +12,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
     <link href="/css/hamburgers.css" rel="stylesheet">
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/x-icon"/>
     <link href="{{ url('css/app.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i|Montserrat&display=swap" rel="stylesheet" type="text/css">
 </head>

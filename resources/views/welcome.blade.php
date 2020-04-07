@@ -62,6 +62,8 @@
                 margin-bottom: 30px;
             }
         </style>
+        <link rel="icon" href="{{ asset('favicon.png') }}" type="image/x-icon"/>
+
     </head>
     <body>
         <div class="flex-center position-ref full-height">

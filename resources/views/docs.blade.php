@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>API Reference</title>
 
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/x-icon"/>
     <link href="{{ url('docs/css/style.css') }}" rel="stylesheet" type="text/css">
     <script src="{{ url('docs/js/all.css') }}"></script>
 
