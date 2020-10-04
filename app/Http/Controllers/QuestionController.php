@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Question;
 use App\Category;
+use Auth;
 use Illuminate\Support\Facades\DB;
 
 class QuestionController extends Controller {
@@ -107,6 +108,29 @@ class QuestionController extends Controller {
             $question = $question->whereDay('air_date', $request->day);
         }
         return $question;
+    }
+
+    function addQuestion(Request $request)
+    {
+        if (!Auth::guest()) {
+
+            $data = $request->validate([
+                'question' => 'required|string',
+                'answer' => 'required|string',
+                'value' => 'required|string',
+                'air_date' => 'required|date',
+                'category_id' => 'required|integer|exists,categories,id'
+            ]);
+
+            $question = Question::create($data);
+
+            return response()->json([
+                'question' => $question,
+                'created'  => true,
+                'message'  => "Question was successfully created",
+            ], 201);
+        }
+
     }
 
 }
