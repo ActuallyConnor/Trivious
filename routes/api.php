@@ -26,3 +26,5 @@ Route::get('question/today', 'QuestionController@getRandomQuestionFromToday');
 Route::get('questions/today', 'QuestionController@getQuestionsFromToday');
 
 Route::get('questions', 'QuestionController@multiQuestionRequestHandler');
+
+Route::post('add-question', 'QuestionController@addQuestion')->middleware('auth.basic.once');
