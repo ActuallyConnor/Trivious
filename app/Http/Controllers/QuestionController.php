@@ -29,7 +29,9 @@ class QuestionController extends Controller {
         }
         $question = $this->addCategoryToQuestionQuery($request, $question);
 
-        return $question->with(['category'])->get();
+        return response(
+            $question->with(['category'])->get()
+        )->header('Access-Control-Allow-Origin', '*');
     }
 
     function getRandomQuestionFromToday(Request $request) {
@@ -48,7 +50,9 @@ class QuestionController extends Controller {
 
         $question = $this->questionRequestHandler($request, $question);
 
-        return $question->with('category')->get()->random();
+        return response(
+            $question->with('category')->get()->random()
+        )->header('Access-Control-Allow-Origin', '*');
     }
 
     function multiQuestionRequestHandler(Request $request) {
@@ -69,7 +73,9 @@ class QuestionController extends Controller {
             $question = $question->limit($request->quantity);
         }
 
-        return $question->with(['category'])->get();
+        return response(
+            $question->with(['category'])->get()
+        )->header('Access-Control-Allow-Origin', '*');
     }
 
     function questionRequestHandler($request, $question) {
